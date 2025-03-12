@@ -28,12 +28,12 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <UApp>
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <UNotifications />
-    <UModals />
-  </div>
+    <UToast />
+    <UAlert />
+  </UApp>
 </template>
