@@ -2,9 +2,24 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --color-primary: #4f46e5;
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
+  --color-primary: #6271ff;
+  --color-primary-50: #f5f6ff;
+  --color-primary-100: #eceeff;
+  --color-primary-200: #d9deff;
+  --color-primary-300: #b8c2ff;
+  --color-primary-400: #a4b2ff;
+  --color-primary-500: #8e9dff;
+  --color-primary-600: #7889ff;
+  --color-primary-700: #6271ff;
+  --color-primary-800: #4d5ce6;
+  --color-primary-900: #3947cc;
+  --color-primary-950: #232c99;
+}
+
+:root {
+  --font-family: "Inter", sans-serif;
+}
+
+html {
+  font-family: var(--font-family);
 }

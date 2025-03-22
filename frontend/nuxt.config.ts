@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   modules: [
+    "@nuxt/ui",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/fonts",
@@ -17,6 +18,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/scripts",
     "@nuxt/test-utils",
-    "@nuxt/ui",
   ],
+  colorMode: {
+    preference: "light",
+  },
 });

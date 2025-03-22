@@ -15,7 +15,7 @@ const navigationLinks: NavigationLink[] = [
   },
   {
     label: "Bookings",
-    icon: "i-heroicons-calendar",
+    icon: "i-heroicons-document-text",
     to: "/bookings",
   },
   {
@@ -25,7 +25,7 @@ const navigationLinks: NavigationLink[] = [
   },
   {
     label: "Analyze",
-    icon: "i-heroicons-chart-pie",
+    icon: "i-heroicons-chart-bar",
     to: "/analyze",
   },
   {
@@ -41,15 +41,29 @@ const navigationLinks: NavigationLink[] = [
 ];
 
 const route = useRoute();
+
+// Add Inter font
+useHead({
+  link: [
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+    },
+  ],
+});
 </script>
 
 <template>
   <div class="h-screen">
     <div class="flex h-full bg-white dark:bg-gray-900">
       <!-- Sidebar Navigation -->
-      <nav class="w-64 bg-gray-50 dark:bg-gray-800 flex flex-col">
-        <div class="px-6 py-4">
-          <h1 class="text-xl font-semibold text-gray-900 dark:text-white">
+      <nav
+        class="w-60 bg-gray-50 dark:bg-gray-800 flex flex-col border-r border-gray-200 dark:border-gray-700"
+      >
+        <div class="px-6 py-5">
+          <h1
+            class="text-2xl font-semibold text-primary-700 dark:text-primary-400"
+          >
             Yuiop
           </h1>
         </div>
@@ -68,7 +82,7 @@ const route = useRoute();
             New experience
           </UButton>
 
-          <div class="space-y-1">
+          <div class="space-y-2">
             <UButton
               v-for="(link, index) in navigationLinks"
               :key="index"
@@ -76,11 +90,11 @@ const route = useRoute();
               :class="[
                 'w-full justify-start font-normal',
                 route.path === link.to
-                  ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/50 dark:text-primary-400'
+                  ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
                   : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700/50',
               ]"
               variant="ghost"
-              size="sm"
+              size="md"
             >
               <template #leading>
                 <UIcon :name="link.icon" class="w-5 h-5" />

@@ -1,16 +1,23 @@
 import type { Config } from "tailwindcss";
 
 export default <Config>{
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
     extend: {
       colors: {
-        "yuiop-primary": {
+        yuiop: {
           50: "#f5f6ff",
           100: "#eceeff",
           200: "#d9deff",
           300: "#b8c2ff",
-          400: "#a4b2ff", // Your main color
+          400: "#a4b2ff",
           500: "#8e9dff",
           600: "#7889ff",
           700: "#6271ff",
